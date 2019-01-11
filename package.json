@@ -1,0 +1,34 @@
+{
+  "name": "timed-fetch",
+  "version": "1.0.1",
+  "description": "",
+  "author": "Charlie Hay",
+  "license": "ISC",
+  "homepage": "https://github.com/haytherecharlie/timed-fetch.git#readme",
+  "main": "build/index.js",
+  "bugs": {
+    "url": "https://github.com/haytherecharlie/timed-fetch.git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haytherecharlie/timed-fetch.git.git"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "es6-promise": "^4.2.5",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "scripts": {
+    "prebuild": "rm -rf ./build && mkdir ./build",
+    "build": "babel -d ./build ./src -s",
+    "dependencies": "npm i babel-cli babel-preset-env babel-preset-stage-0 --save-dev",
+    "prepublish": "npm run build"
+  },
+  "keywords": []
+}
